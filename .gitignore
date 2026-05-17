@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+bin/
+server
+
+# Local database locks / runtime
+*.log
+
+# OS metadata
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db

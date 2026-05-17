@@ -1,0 +1,82 @@
+[
+  {
+    "id": "L001",
+    "book_id": "B001",
+    "member_id": "M001",
+    "loan_date": "01 Mei 2024",
+    "due_date": "18 Mei",
+    "status": "On Loan"
+  },
+  {
+    "id": "L002",
+    "book_id": "B003",
+    "member_id": "M002",
+    "loan_date": "28 Apr 2024",
+    "due_date": "12 Mei",
+    "status": "Returned"
+  },
+  {
+    "id": "L003",
+    "book_id": "B002",
+    "member_id": "M003",
+    "loan_date": "25 Apr 2024",
+    "due_date": "30 Apr",
+    "status": "Overdue"
+  },
+  {
+    "id": "L004",
+    "book_id": "B005",
+    "member_id": "M004",
+    "loan_date": "10 Mei 2024",
+    "due_date": "24 Mei",
+    "status": "On Loan"
+  },
+  {
+    "id": "L005",
+    "book_id": "B006",
+    "member_id": "M005",
+    "loan_date": "12 Mei 2024",
+    "due_date": "26 Mei",
+    "status": "On Loan"
+  },
+  {
+    "id": "L006",
+    "book_id": "B007",
+    "member_id": "M006",
+    "loan_date": "14 Mei 2024",
+    "due_date": "28 Mei",
+    "status": "On Loan"
+  },
+  {
+    "id": "L007",
+    "book_id": "B008",
+    "member_id": "M007",
+    "loan_date": "15 Mei 2024",
+    "due_date": "29 Mei",
+    "status": "On Loan"
+  },
+  {
+    "id": "L008",
+    "book_id": "B009",
+    "member_id": "M008",
+    "loan_date": "16 Mei 2024",
+    "due_date": "30 Mei",
+    "status": "Returned"
+  },
+  {
+    "id": "L009",
+    "book_id": "B010",
+    "member_id": "M009",
+    "loan_date": "17 Mei 2024",
+    "due_date": "31 Mei",
+    "status": "Returned"
+  },
+  {
+    "id": "L010",
+    "book_id": "B004",
+    "member_id": "M010",
+    "loan_date": "10 Mei 2024",
+    "due_date": "24 Mei",
+    "status": "Returned"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "M001",
+    "name": "Irham",
+    "email": "irham@gmail.com",
+    "phone": "08123456789",
+    "join_date": "01 Mei 2024"
+  },
+  {
+    "id": "M002",
+    "name": "Naufal",
+    "email": "naufal@gmail.com",
+    "phone": "08129876543",
+    "join_date": "28 Apr 2024"
+  },
+  {
+    "id": "M003",
+    "name": "Samuel",
+    "email": "samuel@gmail.com",
+    "phone": "08134567890",
+    "join_date": "25 Apr 2024"
+  },
+  {
+    "id": "M004",
+    "name": "Andhika",
+    "email": "andhika@gmail.com",
+    "phone": "08145678901",
+    "join_date": "20 Apr 2024"
+  },
+  {
+    "id": "M005",
+    "name": "Budi Santoso",
+    "email": "budi.santoso@gmail.com",
+    "phone": "08156789012",
+    "join_date": "15 Feb 2024"
+  },
+  {
+    "id": "M006",
+    "name": "Siti Aminah",
+    "email": "siti.aminah@gmail.com",
+    "phone": "08167890123",
+    "join_date": "20 Mar 2024"
+  },
+  {
+    "id": "M007",
+    "name": "Joko Widodo",
+    "email": "joko.widodo@gmail.com",
+    "phone": "08178901234",
+    "join_date": "25 Apr 2024"
+  },
+  {
+    "id": "M008",
+    "name": "Dewi Lestari",
+    "email": "dewi.lestari@gmail.com",
+    "phone": "08189012345",
+    "join_date": "30 May 2024"
+  },
+  {
+    "id": "M009",
+    "name": "Wawan Setiawan",
+    "email": "wawan.setiawan@gmail.com",
+    "phone": "08190123456",
+    "join_date": "05 Jun 2024"
+  },
+  {
+    "id": "M010",
+    "name": "Rian Hidayat",
+    "email": "rian.hidayat@gmail.com",
+    "phone": "08201234567",
+    "join_date": "10 Jul 2024"
+  }
+]

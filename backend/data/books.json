@@ -1,0 +1,62 @@
+[
+  {
+    "id": "B001",
+    "title": "Clean Code",
+    "author": "Robert",
+    "status": "On Loan"
+  },
+  {
+    "id": "B002",
+    "title": "Design Patterns",
+    "author": "GoF",
+    "status": "On Loan"
+  },
+  {
+    "id": "B003",
+    "title": "The Pragmatic",
+    "author": "Hunt",
+    "status": "Available"
+  },
+  {
+    "id": "B004",
+    "title": "DDD",
+    "author": "Maria",
+    "status": "Available"
+  },
+  {
+    "id": "B005",
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "status": "On Loan"
+  },
+  {
+    "id": "B006",
+    "title": "Introduction to Algorithms",
+    "author": "Cormen",
+    "status": "On Loan"
+  },
+  {
+    "id": "B007",
+    "title": "Clean Architecture",
+    "author": "Robert",
+    "status": "On Loan"
+  },
+  {
+    "id": "B008",
+    "title": "Compilers",
+    "author": "Aho",
+    "status": "On Loan"
+  },
+  {
+    "id": "B009",
+    "title": "Computer Networks",
+    "author": "Tanenbaum",
+    "status": "Available"
+  },
+  {
+    "id": "B010",
+    "title": "Operating Systems",
+    "author": "Silberschatz",
+    "status": "Available"
+  }
+]
