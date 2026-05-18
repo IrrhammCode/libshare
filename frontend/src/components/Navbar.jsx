@@ -8,7 +8,8 @@ export default function Navbar({ activePage = 'dashboard', setActivePage }) {
     { id: 'dashboard', label: 'Dashboard' },
     { id: 'books', label: 'Books' },
     { id: 'members', label: 'Members' },
-    { id: 'loans', label: 'Loans' }
+    { id: 'loans', label: 'Loans' },
+    { id: 'profile', label: 'Kelompok' }
   ];
 
   return (

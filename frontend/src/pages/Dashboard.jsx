@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import { BookOpen, Users, Clock } from 'lucide-react';
+import { BookOpen, Users, Clock, Users2 } from 'lucide-react';
 
 export default function Dashboard({ activePage = 'dashboard', setActivePage }) {
   const [stats, setStats] = useState({ books: 24, members: 12, activeLoans: 5 });
@@ -111,7 +111,24 @@ export default function Dashboard({ activePage = 'dashboard', setActivePage }) {
 
       </div>
 
-      {/* Recent Loans Section */}
+      {/* Profile Kelompok Banner */}
+      <div
+        onClick={() => setActivePage && setActivePage('profile')}
+        className="mb-8 bg-[#1E3A5F] hover:bg-[#1E3A5F]/80 border border-[#1E3A5F]/60 hover:border-[#F59E0B]/40 rounded-xl p-5 flex items-center gap-5 cursor-pointer transition-all duration-300 group shadow-lg"
+      >
+        <div className="w-12 h-12 rounded-xl bg-[#F59E0B]/20 border border-[#F59E0B]/30 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+          <Users2 className="w-6 h-6 text-[#F59E0B]" />
+        </div>
+        <div>
+          <h3 className="text-sm font-extrabold text-white tracking-tight">Profil Kelompok</h3>
+          <p className="text-xs text-[#F8FAFC]/50 font-medium mt-0.5">4 anggota &mdash; Arsitektur Komputasi Awan, Tugas 11</p>
+        </div>
+        <div className="ml-auto">
+          <span className="text-[10px] font-black uppercase tracking-widest bg-[#F59E0B]/20 border border-[#F59E0B]/30 text-[#F59E0B] px-3 py-1 rounded-full group-hover:bg-[#F59E0B]/30 transition-colors">
+            Lihat →
+          </span>
+        </div>
+      </div>
       <div className="bg-[#1E1E1E] p-6 rounded-xl border border-gray-800 shadow-xl">
         <h2 className="text-lg font-extrabold mb-5 tracking-tight text-white">Recent Loans</h2>
         

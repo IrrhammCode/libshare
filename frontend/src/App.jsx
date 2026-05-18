@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import Books from './pages/Books';
 import Members from './pages/Members';
 import Loans from './pages/Loans';
+import GroupProfile from './pages/GroupProfile';
 
 export default function App() {
   const [activePage, setActivePage] = useState('dashboard');
@@ -20,6 +21,8 @@ export default function App() {
         return <Members activePage={activePage} setActivePage={setActivePage} />;
       case 'loans':
         return <Loans activePage={activePage} setActivePage={setActivePage} />;
+      case 'profile':
+        return <GroupProfile activePage={activePage} setActivePage={setActivePage} />;
       default:
         return <Dashboard activePage={activePage} setActivePage={setActivePage} />;
     }
