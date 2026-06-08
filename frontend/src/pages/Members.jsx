@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
+import { API_BASE_URL } from '../config';
 
 export default function Members({ activePage = 'members', setActivePage }) {
   const [members, setMembers] = useState([]);
@@ -25,7 +26,7 @@ export default function Members({ activePage = 'members', setActivePage }) {
   const fetchMembers = async () => {
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:8080/api/members');
+      const res = await fetch(`${API_BASE_URL}/api/members`);
       if (!res.ok) throw new Error('API server offline');
       const data = await res.json();
       setMembers(data);
@@ -63,7 +64,7 @@ export default function Members({ activePage = 'members', setActivePage }) {
     if (!window.confirm('Delete this member registry?')) return;
 
     try {
-      const res = await fetch(`http://localhost:8080/api/members/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/api/members/${id}`, {
         method: 'DELETE'
       });
       if (!res.ok) throw new Error('API failed');
@@ -91,7 +92,7 @@ export default function Members({ activePage = 'members', setActivePage }) {
     };
 
     try {
-      const url = isEdit ? `http://localhost:8080/api/members/${memberPayload.id}` : 'http://localhost:8080/api/members';
+      const url = isEdit ? `${API_BASE_URL}/api/members/${memberPayload.id}` : `${API_BASE_URL}/api/members`;
       const method = isEdit ? 'PUT' : 'POST';
 
       const res = await fetch(url, {

@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { BookOpen, Users, Clock, Users2 } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 export default function Dashboard({ activePage = 'dashboard', setActivePage }) {
   const [stats, setStats] = useState({ books: 24, members: 12, activeLoans: 5 });
@@ -16,9 +17,9 @@ export default function Dashboard({ activePage = 'dashboard', setActivePage }) {
   const fetchDashboardData = async () => {
     try {
       const [booksRes, membersRes, loansRes] = await Promise.all([
-        fetch('http://localhost:8080/api/books'),
-        fetch('http://localhost:8080/api/members'),
-        fetch('http://localhost:8080/api/loans')
+        fetch(`${API_BASE_URL}/api/books`),
+        fetch(`${API_BASE_URL}/api/members`),
+        fetch(`${API_BASE_URL}/api/loans`)
       ]);
 
       if (booksRes.ok && membersRes.ok && loansRes.ok) {

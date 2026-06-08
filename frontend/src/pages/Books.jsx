@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { Book, LayoutGrid, List, Plus } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 export default function Books({ activePage = 'books', setActivePage }) {
   const [books, setBooks] = useState([]);
@@ -28,7 +29,7 @@ export default function Books({ activePage = 'books', setActivePage }) {
   const fetchBooks = async () => {
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:8080/api/books');
+      const res = await fetch(`${API_BASE_URL}/api/books`);
       if (!res.ok) throw new Error('API server offline');
       const data = await res.json();
       setBooks(data);
@@ -68,7 +69,7 @@ export default function Books({ activePage = 'books', setActivePage }) {
     if (!window.confirm('Delete this book from shelf catalog?')) return;
 
     try {
-      const res = await fetch(`http://localhost:8080/api/books/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/api/books/${id}`, {
         method: 'DELETE'
       });
       if (!res.ok) throw new Error('Failed to delete book');
@@ -90,7 +91,7 @@ export default function Books({ activePage = 'books', setActivePage }) {
     }
 
     try {
-      const url = isEdit ? `http://localhost:8080/api/books/${form.id}` : 'http://localhost:8080/api/books';
+      const url = isEdit ? `${API_BASE_URL}/api/books/${form.id}` : `${API_BASE_URL}/api/books`;
       const method = isEdit ? 'PUT' : 'POST';
 
       const res = await fetch(url, {

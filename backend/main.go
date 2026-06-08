@@ -264,8 +264,12 @@ func main() {
 		c.JSON(http.StatusNotFound, gin.H{"error": "Loan not found"})
 	})
 
-	// Jalankan server di port 8080 (IaaS Internal Backend)
-	r.Run(":8080")
+	// Jalankan server di port yang dikonfigurasi (IaaS Internal Backend)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	r.Run(":" + port)
 }
 
 // === HELPER FUNCTIONS UNTUK PERSISTENSI JSON ===

@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
+import { API_BASE_URL } from '../config';
 
 export default function Loans({ activePage = 'loans', setActivePage }) {
   const [loans, setLoans] = useState([]);
@@ -30,9 +31,9 @@ export default function Loans({ activePage = 'loans', setActivePage }) {
     try {
       setLoading(true);
       const [loansRes, booksRes, membersRes] = await Promise.all([
-        fetch('http://localhost:8080/api/loans'),
-        fetch('http://localhost:8080/api/books'),
-        fetch('http://localhost:8080/api/members')
+        fetch(`${API_BASE_URL}/api/loans`),
+        fetch(`${API_BASE_URL}/api/books`),
+        fetch(`${API_BASE_URL}/api/members`)
       ]);
 
       if (loansRes.ok && booksRes.ok && membersRes.ok) {
@@ -113,7 +114,7 @@ export default function Loans({ activePage = 'loans', setActivePage }) {
     };
 
     try {
-      const res = await fetch('http://localhost:8080/api/loans', {
+      const res = await fetch(`${API_BASE_URL}/api/loans`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -147,7 +148,7 @@ export default function Loans({ activePage = 'loans', setActivePage }) {
     const updated = { ...targetLoan, status: 'Returned' };
 
     try {
-      const res = await fetch(`http://localhost:8080/api/loans/${selectedLoanId}`, {
+      const res = await fetch(`${API_BASE_URL}/api/loans/${selectedLoanId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updated)
@@ -178,7 +179,7 @@ export default function Loans({ activePage = 'loans', setActivePage }) {
     if (!targetLoan) return;
 
     try {
-      const res = await fetch(`http://localhost:8080/api/loans/${selectedLoanId}`, {
+      const res = await fetch(`${API_BASE_URL}/api/loans/${selectedLoanId}`, {
         method: 'DELETE'
       });
 
